@@ -1,6 +1,6 @@
 --[[
 
-=====================================================================
+======i===============================================================
 ==================== READ THIS BEFORE CONTINUING ====================
 =====================================================================
 ========                                    .-----.          ========
@@ -240,6 +240,16 @@ require('lazy').setup({
 
   -- "gc" to comment visual regions/lines
   { 'numToStr/Comment.nvim', opts = {} },
+
+  -- {
+  --   'lervag/vimtex',
+  --   lazy = false, -- we don't want to lazy load VimTeX
+  --   -- tag = "v2.15", -- uncomment to pin to a specific release
+  --   init = function()
+  --     -- VimTeX configuration goes here, e.g.
+  --     vim.g.vimtex_view_method = 'zathura'
+  --   end,
+  -- },
 
   -- Here is a more advanced example where we pass configuration
   -- options to `gitsigns.nvim`. This is equivalent to the following Lua:
@@ -559,7 +569,7 @@ require('lazy').setup({
       local servers = {
         -- clangd = {},
         -- gopls = {},
-        -- pyright = {},
+        pylsp = {},
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
@@ -866,7 +876,7 @@ require('lazy').setup({
   --  Uncomment any of the lines below to enable them (you will need to restart nvim).
   --
   -- require 'kickstart.plugins.debug',
-  -- require 'kickstart.plugins.indent_line',
+  require 'kickstart.plugins.indent_line',
   -- require 'kickstart.plugins.lint',
   -- require 'kickstart.plugins.autopairs',
   -- require 'kickstart.plugins.neo-tree',
